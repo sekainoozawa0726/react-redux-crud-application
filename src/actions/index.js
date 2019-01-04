@@ -2,7 +2,7 @@ import axios from 'axios';
 export const READ_EVENTS = 'READ_EVENTS';
 
 // CRUD処理の際に使うベースURL
-const ROOT_URL = 'https://udemy-utils.herokuappcom/api/v1';
+const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1';
 const QUERY_STRING = '?token=token123';
 
 export const readEvents = () => async dispatch => {
