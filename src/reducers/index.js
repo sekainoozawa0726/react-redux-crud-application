@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 // ↑これが全てのreducerファイルを統合する
 // ↓統括するreducerファイルをimport
-import count from "./count";
+import events from "./events";
 
-export default combineReducers({ count })
+export default combineReducers({ events })
 // reducerファイルを列挙していくだけで使用可能
