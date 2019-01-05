@@ -3,5 +3,7 @@ import { combineReducers } from 'redux';
 // ↓統括するreducerファイルをimport
 import events from "./events";
 
-export default combineReducers({ events })
+import { reducer as form } from 'redux-form';
+
+export default combineReducers({ events, form })
 // reducerファイルを列挙していくだけで使用可能
