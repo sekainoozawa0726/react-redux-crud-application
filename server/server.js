@@ -8,7 +8,7 @@ app.use('/', express.static(clientPath));
 
 // app.use(function(req, res, next){
 //   res.status(404);
-//   res.sendFile(clientPath + '/index.html');
+//   res.sendFile(clientPath + '/client');
 // });
 
 
@@ -19,6 +19,6 @@ app.use(function(err, req, res, next) {
 });
 
 //指定したポートでリクエスト待機状態にする
-app.listen(app.get('/port'), function () {
+app.listen(app.get('port'), function () {
   console.log('server listening on port :' + app.get('port'));
 });
