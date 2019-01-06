@@ -1,0 +1,33 @@
+
+.container {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.event-list {
+  width: 50%;
+}
+.list-body {
+  padding: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px #e6e5e5;
+}
+.btn-cont {
+  margin: 20px;
+  padding: 20px;
+  background-color: #444FFF;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px rgb(191, 187, 187);
+}
+.btn-cont:hover {
+  background-color: #666EEE;
+  box-shadow: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}

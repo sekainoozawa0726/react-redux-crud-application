@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { readEvents } from '../actions';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
+import '../styles/eventsIndex.css';
 
 class EventsIndex extends Component {
 
@@ -14,9 +15,9 @@ class EventsIndex extends Component {
   renderEvents() {
     return _.map(this.props.events, events => (
       <tr>
-        <td>{events.id}</td>
-        <td>{events.title}</td>
-        <td>{events.body}</td>
+        <td className='list-body'>{events.id}</td>
+        <td className='list-body'>{events.title}</td>
+        <td className='list-body'>{events.body}</td>
       </tr>
     ))
   }
@@ -24,9 +25,8 @@ class EventsIndex extends Component {
   render() {
     const props = this.props;
     return(
-      <div>
-        <div>{console.log(props.events)}</div>
-          <table>
+      <div className='container'>
+          <table className='event-list'>
             <thead>
               <tr>
                 <th>ID</th>
@@ -38,7 +38,9 @@ class EventsIndex extends Component {
               {this.renderEvents()}
             </tbody>
           </table>
-          <Link to='/events/new'>New Event</Link>
+          <div className='btn-cont'>
+            <Link to='/events/new'>New Event</Link>
+          </div>
       </div>
     );
   }

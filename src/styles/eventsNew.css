@@ -1,0 +1,27 @@
+
+.contianer {
+  width: 100%;
+}
+.text-form {
+  margin: 20px;
+  width: 60%;
+  height: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #666eee;
+}
+.submit-btn {
+  margin: 20px;
+  padding: 20px;
+  background-color: #444FFF;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px rgb(191, 187, 187);
+}
+.submit-btn:hover {
+  background-color: #666EEE;
+  box-shadow: none;
+}

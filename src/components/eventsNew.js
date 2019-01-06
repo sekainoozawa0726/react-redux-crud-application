@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { postEvent } from '../actions';
 import { Field, reduxForm } from 'redux-form';
+import '../styles/eventsNew.css';
 
 class EventsNew extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class EventsNew extends Component {
     const { input, label, type, meta: { touched, error } } = field;
     return (
     <div>
-      <input {...input} placeholder={label} type={type} />
+      <input className='text-form' {...input} placeholder={label} type={type} />
       {touched && error && <span>{error}</span>}
     </div>)
   }
@@ -29,8 +30,8 @@ class EventsNew extends Component {
   render() {
     const { handleSubmit } = this.props;
     return(
-      <div>
-        <form onSubmit={handleSubmit(this.onSubmit)}>
+      <div className='container'>
+        <form className='submit-form' onSubmit={handleSubmit(this.onSubmit)}>
           <div>
             <Field label='Title' name='title' type='text' component={this.renderField} />
           </div>
@@ -38,7 +39,7 @@ class EventsNew extends Component {
             <Field label='Body' name='body' type='text' component={this.renderField} />
           </div>
           <div>
-            <input type='submit' value='submit' disabled={false} />
+            <input className='submit-btn' type='submit' value='submit' disabled={false} />
             <Link to='/'>cancel</Link>
           </div>
         </form>
