@@ -4,11 +4,11 @@ export const READ_EVENTS = 'READ_EVENTS';
 const CREATE_EVENT = 'CREATE_EVENT';
 
 // CRUD処理の際に使うベースURL
-const ROOT_URL = 'http://jws.jalan.net/APIAdvance/StockSearch/V1/';
-const QUERY_STRING = '?sauna:1';
+const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1';
+const QUERY_STRING = '?token=token123';
 
 export const readEvents = () => async dispatch => {
-  const response = await axios.get(`${ROOT_URL}${QUERY_STRING}`);
+  const response = await axios.get(`${ROOT_URL}/events${QUERY_STRING}`);
   dispatch({ type: READ_EVENTS, response });
 }
 
